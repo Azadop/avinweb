@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>बहुत मारूंगा तूझे Amit 😡 - CRAZY XYZ Vs MR. INDIAN HACKER</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <p style="margin-left: 5px;font-family: 'Barlow Condensed', sans-serif; "> * To Enjoy this with more feature Download The App <a href="https://azadop.github.io/avinweb/MozaDownload">here</a>
+</p>
+    <div class="container">
+      <div class="WM"> <label>MOZA PLAY</label></div>
+        <video src="https://firebasestorage.googleapis.com/v0/b/moza-video-cfe4b.appspot.com/o/2.mp4?alt=media&token=804f7834-d0b8-4585-a466-98e704fe0d70" id="video"></video>
+        <div class="controls">
+            <button onclick="rewind(event)"><i class="material-icons md-25">arrow_back_ios</i></button>
+                      <button onclick="play(event)"><i class="fa fa-play"></i><i class="fa fa-pause"></i></button>
+                      <button onclick="forward(event)"><i class="material-icons md-25">arrow_forward_ios</i></button>
+          <!--<button onclick="fullScreen(event)"><i class="fa fa-expand"></i></button>-->
+        </div>
+      
+            <div class="timeline"><div class="VideoTime"><label id="VT">00:00</label></div>
+                <div class="bar">
+                    <div class="inner">
+                </div>
+            </div><div class="CurrentTime"><label id="CT">00:00</label></div>
+          <!--<button onclick="download(event)"><i class="fa fa-cloud-download"></i></button>-->
+        </div>
+    </div>
+    <script>
+// Select the HTML5 video
+const video = document.querySelector("#video")
+// set the pause button to display:none by default
+document.querySelector(".fa-pause").style.display = "none"
+// update the progress bar
+video.addEventListener("timeupdate", () => {
+ var s = parseInt(video.currentTime % 60);
+    var m = parseInt((video.currentTime / 60) % 60);
+  
+   var vs = parseInt(video.duration % 60);
+    var vm = parseInt((video.duration / 60) % 60);
+ document.getElementById("CT").innerHTML = m + ':' + s;
+  
+document.getElementById("VT").innerHTML = vm + ':' + vs;
+  
+    let curr = (video.currentTime / video.duration) * 100
+    if(video.ended)
+  {
+        document.querySelector(".fa-play").style.display = "block"
+        document.querySelector(".fa-pause").style.display = "none"
+
+    }
+    document.querySelector('.inner').style.width = `${curr}%`
+})
+// pause or play the video
+const play = (e) => {
+    // Condition when to play a video
+    if(video.paused){
+        document.querySelector(".fa-play").style.display = "none"
+        document.querySelector(".fa-pause").style.display = "block"
+        video.play()
+    }
+    else{
+        document.querySelector(".fa-play").style.display = "block"
+        document.querySelector(".fa-pause").style.display = "none"
+        video.pause()
+    }
+}
+// trigger fullscreen
+const fullScreen = (e) => {
+    e.preventDefault()
+    video.requestFullscreen()
+}
+// download the video
+const download = (e) => {
+    e.preventDefault()
+    let a = document.createElement('a')
+    a.href = video.src 
+    a.target = "_blank"
+    a.download = ""
+    document.body.appendChild(a)
+    a.click()
+    document.body.removeChild(a)
+}
+// rewind the current time
+const rewind = (e) => {
+    video.currentTime = video.currentTime - ((video.duration/1000) * 5)
+}
+// forward the current time
+const forward = (e) => {
+    video.currentTime = video.currentTime + ((video.duration/1000) * 5)
+}
+
+
+  </script>
+<style>
+*{
+  margin-left: 0px;
+}
+video{
+  background-color: #000;
+}
+.container {
+    position: relative;
+    display: flex;
+    width: max-content;
+    height: max-content;
+    justify-content: center;
+    align-items: center;
+}
+.container #video {
+    width: 100%;
+    height: 210px;
+    border-radius: 0px;
+}
+.container .controls {
+    position: absolute;
+    bottom: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    opacity: 100;
+    transition: opacity 0.4s;
+}
+.container:hover .controls {
+    opacity: 1;
+}
+.container .controls button {
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+    color: #fff;
+    font-weight: bolder;
+    text-shadow: 2px 1px 2px #000;
+    border: none;
+    cursor: pointer;
+    background-color: #000;
+    opacity: 50%;
+}
+.container .timeline {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-right: 3px solid #;
+    border-left: 3px solid #;
+    margin-left: 10px;
+    margin-right: 10px;
+    opacity: 100;
+    transition: opacity 0.4s;
+}
+.container .timeline .bar{
+    background: #fff;
+    height: 4px;
+    flex: 1;
+  border-radius: 50px;
+}
+.container .timeline .bar .inner{
+    background: #03AEFF;
+    width: 0%;
+    height: 100%;
+  border-radius: 50px;
+}
+.fa {
+    font-size: 20px !important;
+}
+.container .timeline .VideoTime{
+  color: #fff;
+  font-size: 14px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.container .timeline .CurrentTime{
+  color: #fff;
+  font-size: 14px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.container .WM label{
+  width: 50%;
+  font-weight: bold;
+  color: #fff;
+  font-family: 'Barlow Condensed', sans-serif; 
+  opacity: 50;
+  font-size: 20px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  transition: opacity 0.4s;
+}
+</style>
+
+<div class="Info">
+  <div class="Title"><label>बहुत मारूंगा तूझे Amit 😡 - CRAZY XYZ Vs MR. INDIAN HACKER</label>
+    <!-- Not Important
+  </div>
+  <div class="Subinfo">
+    <label>72 views 6 months ago more...</label>
+  </div>-->
+  <div class="creator"><img src="https://firebasestorage.googleapis.com/v0/b/moza-post.appspot.com/o/8851772685.png?alt=media&token=5e8c6f5e-5101-4dfe-be5a-7f0e137fd177"><ul><li><label>Crazy Creator</label></li><!-- Not Important<li><span>1</span></li><li><p style="color: #fff;margin-right: 100px;">jweo</p></li><li><button>Follow</button></li>--></ul></div>
+</div>
+<style>
+.Info{
+  width: 100%;
+  margin-top: 10px;
+  margin-left: 10px;
+  background-color: #fff;
+}
+.Info .Title label{
+  font-size: 18px;
+  font-weight: bold;
+}
+.Info .Subinfo label{
+  font-size: 12px;
+  color: #858585;
+}
+.Info .creator ul{
+  list-style-type: none;
+  margin-left: 0px;
+  margin-top: -30px; 
+} 
+.Info .creator li{
+  display: inline-block;
+  padding-top: -100px;
+}
+.Info .creator img{
+  width: 35px;
+  height: 35px;
+  border-radius: 20px;
+  margin-left: 0px;
+  margin-top: 10px;
+}
+.Info .creator ul li label{
+  font-size: 13px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+.Info .creator ul li span{
+  font-size: 10px;
+  color: #858585;
+  margin-left: 10px;
+}
+.Info .creator ul li button{
+  border: 0px;
+  border-radius: 10px;
+  background-color: #8505ff;
+  color: #fff;
+  font-size: 14px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  margin-right: -5px;
+}
+</style>
+<div class="divider" style="height: 1px;background-color: #eee;margin-left: 0px;margin-right: 0px;width: 100%;"></div>
+<a href="https://azadop.github.io/avinweb/WELCOM TO AV DIGITAL INDIA || AV INDIA ULTD || MOZA" style="text-decoration: none;color: #000;"><div class="Info" style="margin-left: 0px;">
+  <div class="img"><img style="width: 100%;height: 210px;"src="https://lh3.googleusercontent.com/blogger_img_proxy/AAOd8MyRbhRVpwP7z5cDiofBc7qPom-FkxFm60OCo04Ax-uaI1lKjXUEKxa_ptOkY6FbPvZ7ZGwU4l9d6EjO8VdCaXrCfY9DQsxr8iDk1Beigv5x=w1200-h630-p-k-no-nu"></div>
+  <div class="Title"><label style="margin-left: 0px ;font-size: 15px">WELCOM TO AV DIGITAL INDIA || AV INDIA ULTD || MOZA</label>
+    <!-- Not Important
+  </div>
+  <div class="Subinfo">
+    <label>72 views 6 months ago more...</label>
+  </div>-->
+  <div class="creator"><img style="margin-left: 0px" src="https://firebasestorage.googleapis.com/v0/b/moza-post.appspot.com/o/8851772685.png?alt=media&token=5e8c6f5e-5101-4dfe-be5a-7f0e137fd177"><ul style="margin-left: 0px"><li><label>Crazy Creator</label></li><!-- Not Important<li><span>1</span></li><li><p style="color: #fff;margin-right: 100px;">jweo</p></li><li><button>Follow</button></li>--></ul><div class="divider" style="height: 2px;background-color: #eee;margin-left: 0px;margin-right: 0px;width: 100%;"></div></div></a>
+  <a href="https://azadop.github.io/avinweb/Watch on Moza Now !" style="text-decoration: none;color: #000;"><div class="Info" style="margin-left: 0px;">
+  <div class="img"><img style="width: 100%;height: 210px;"src="https://firebasestorage.googleapis.com/v0/b/photo-c218f.appspot.com/o/18.png?alt=media&token=799a593f-f9ad-49a2-9ba5-1f64784922b4"></div>
+  <div class="Title"><label style="margin-left: 0px ;font-size: 15px">Watch on Moza Now ! 🔴</label>
+    <!-- Not Important
+  </div>
+  <div class="Subinfo">
+    <label>72 views 6 months ago more...</label>
+  </div>-->
+  <div class="creator"><img style="margin-left: 0px" src="https://i.ibb.co/tZg2G8F/20230704-133801.png"><ul style="margin-left: 0px"><li><label>Moza Original</label></li><!-- Not Important<li><span>1</span></li><li><p style="color: #fff;margin-right: 100px;">jweo</p></li><li><button>Follow</button></li>--></ul><div class="divider" style="height: 2px;background-color: #eee;margin-left: 0px;margin-right: 0px;width: 100%;"></div></div></a>
+    
+ <p style="margin-left: 5px;font-family: 'Barlow Condensed', sans-serif; "> * To Enjoy this with more feature Download The App <a href="https://azadop.github.io/avinweb/MozaDownload">here</a>
+</p>
+</div>
+</body>
+</html>
