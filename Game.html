@@ -3,32 +3,71 @@
 <head>
   <title>AV INDIA / GAMES</title>
   <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
-<body>
-  
+<body id="tt">     
+<div class="gamerun"style="margin-left: -8px;
+  margin-top: -8px;"><iframe class="Iframe" id="gamerunc"></iframe></div>
+  <div class="Container" id="Container" style="margin-top: -20px;">
 <!-- T-Rex-->
-  <div class="T-rex">
-     <div class="chat"><ul><li><div class="usericon"><img src="https://dino-chrome.com/static/images/dino.jpg"></div><div class="userinfo"><h5>Running T-Rex</h5><div class="rank"><p class="material-icons md-25">gradegradegradestar_half</p><p></p><p class="info" style="color: #9C9C9C;font-size: 10px;margin-top: -25px;"><b style="color: #818181;">Provider : </b>Google Chome Dino</p></div></div></div>
-<iframe class="T-rexi" style="margin-top: 0px;width: 100%;height: 200px;border: 0px;border-radius: 10px;" src="https://azadop.github.io/avinweb/T-Rex.html"></iframe></div>
+  <div class="T-rex"onclick="trex()">
+     <div class="chat"><ul><li><div class="usericon"><img src="https://dino-chrome.com/static/images/dino.jpg"></div><div class="userinfo"><h5>Running T-Rex</h5><div class="rank"><p class="material-icons md-25">gradegradegradestar_half</p><p></p><p class="info" style="color: #fff;font-size: 10px;margin-top: -25px;"><b style="color: #fff;">Provider : </b>Google Chome Dino</p></div></div></div>
+       <!--<iframe class="T-rexi" style="margin-top: 0px;width: 100%;height: 200px;border: 0px;border-radius: 10px;" src="https://azadop.github.io/avinweb/T-Rex.html"></iframe>--></div>
        
        <!--Doodle Cricket-->       
-         <div class="Doodle Cricket">
-     <div class="chat"><ul><li><div class="usericon"><img src="https://a.silvergames.com/j/b/doodle-cricket.jpg"></div><div class="userinfo"><h5>Doodle Cricket</h5><div class="rank"><p class="material-icons md-25">gradegradegradegradestar_half</p><p></p><p class="info" style="color: #9C9C9C;font-size: 10px;margin-top: -25px;"><b style="color: #818181;">Provider : </b>Doodle Cricket</p></div></div></div>
-<iframe style="margin-top: 0px;width: 100%;height: 300px;border: 0px;border-radius: 10px;" src="https://doodlecricket.github.io/#/"></iframe></div>
+         <div class="DoodleCricket	" onclick="doodlecricket()">
+     <div class="chat"><ul><li><div class="usericon"><img src="https://a.silvergames.com/j/b/doodle-cricket.jpg"></div><div class="userinfo"><h5>Doodle Cricket</h5><div class="rank"><p class="material-icons md-25">gradegradegradegradestar_half</p><p></p><p class="info" style="color: #fff;font-size: 10px;margin-top: -25px;"><b style="color: #fff;">Provider : </b>Doodle Cricket</p></div></div></div>
+       <!--<iframe style="margin-top: 0px;width: 100%;height: 300px;border: 0px;border-radius: 10px;" src="https://doodlecricket.github.io/#/"></iframe>--></div>
        
+       <!-- Temple run -->
+       
+  <div class="TempleRun" onclick="tombrun()">
+     <div class="chat"><ul><li><div class="usericon"><img src="https://play-lh.googleusercontent.com/rCh0O66kaDYS1pWJwWW4CyrU9kzTnFK_wUTyc_XP5xsx96kBs0AGZzZgEPvkLZzLn4Y=w480-h960-rw"></div><div class="userinfo"><h5>Tomb Run</h5><div class="rank"><p class="material-icons md-25">gradegradegradegradestar_half</p><p></p><p class="info" style="color: #fff;font-size: 10px;margin-top: -25px;"><b style="color: #fff;">Provider : </b>AV Source Tracker</p></div></div></div>
+       <!--<iframe class="T-rexi" style="margin-top: 0px;width: 100%;height: 200px;border: 0px;border-radius: 10px;" src="https://azadop.github.io/avinweb/T-Rex.html"></iframe>--></div>       
        
   <style>
+*{
+  font-family: areil;
+  
+} 
+.T-rex{
+  margin-left: 0px;
+  width: 100%;
+  height: 300px;
+  background: url(https://i.pinimg.com/736x/fe/04/9a/fe049aefbb89d654761286db631c162c.jpg);
+  
+  border-radius: 10px;
+}
 .T-rex ul{
   list-style-type: none;
 }
 .T-rex ul li{
   display: inline-block;
 }
+.DoodleCricket{
+  width: 100%;
+  height: 300px;
+  background-color: #000;
+  border-radius: 10px;
+  background: url(https://staticbiassets.in/thumb/msid-75425743,width-700,resizemode-4,imgsize-138543/google-doodle-cricket.jpg);
+}
+.TempleRun{
+  width: 100%;
+  height: 300px;
+  background-color: #000;
+  border-radius: 10px;
+  background: url(https://data.gameflare.com/games/6855/bJTr6Wjq59jsZd-400-300.jpg);
+}
 .chat{
+  border-radius: 10px;
+  height: 300px;
+  width: 100%
   margin-top: 10px;
-  margin-left: -30px;
+  margin-left: 0px;
+  box-shadow: 60px 60px 90px #000 inset;
 }
 .chat ul{
+  margin-left: -30px;
   list-style: none;
 }
 .chat ul li{
@@ -38,6 +77,7 @@
   border-radius: 50px;
 }
 .chat ul li .usericon img{
+  margin-top: 10px;
   width: 50px;
   height: 50px;
   border-radius: 25px;
@@ -51,10 +91,10 @@
 .chat ul li .userinfo h5{
   margin-top: 10px;
   font-size: 15px;
-  color: #000;
+  color: #fff;
 }
 .chat ul li .userinfo a{
-  color: #059AFF;
+  color: #fff;
   font-size: 10px;
   margin: 10px;
   padding-left: 10px;
@@ -72,14 +112,63 @@
 .chat ul li .userinfo .rank{
   margin-top: -15px;
   font-size: 10px;
-  color: #015509;
+  color: #fff;
 }
 .chat ul li .userinfo .rank p{
   margin-top: -18px;
   font-size: 15px;
-  color: #FF5D01;
+  color: #fff;
+}
+@media screen and (min-width: 800px) {
+  .T-rex{
+    height: 600px; 
+  }
+  .DoodleCricket{
+    height: 600px; 
+  }
+  .TempleRun{
+    height: 600px; 
+  }
+}
+.Iframe{  
+  width: 0vw;
+  height: 0vh;
+  margin-left: 0px;
+  margin-bottom: 20px;
+  border: none;
 }
   </style>
-  
+    <script>
+function trex() {
+document.body.scrollTop = 0;
+document.documentElement.scrollTop = 0;  
+document.getElementById("tt").style.overflow = "hidden";
+document.getElementById("gamerunc").src = "https://azadop.github.io/avinweb/T-Rex.html"; 
+document.getElementById("Container").style.visibility = "hidden";
+document.getElementById("gamerunc").style.height = "100vh";
+document.getElementById("gamerunc").style.width = "100vw";
+}    
+function doodlecricket() {
+document.body.scrollTop = 0;
+document.documentElement.scrollTop = 0;
+document.getElementById("tt").style.overflow = "hidden";
+document.getElementById("gamerunc").src = "https://doodlecricket.github.io/#/"; 
+document.getElementById("Container").style.visibility = "hidden";
+document.getElementById("gamerunc").style.height = "100vh";
+document.getElementById("gamerunc").style.width = "100vw";
+document.getElementById("tt").style.overflow = "hidden";
+}
+function tombrun() {
+document.body.scrollTop = 0;
+document.documentElement.scrollTop = 0;
+document.getElementById("tt").style.overflow = "hidden";
+document.getElementById("gamerunc").src = "https://play.forestrygames.com/tomb-runner/"; 
+document.getElementById("Container").style.visibility = "hidden";
+document.getElementById("gamerunc").style.height = "100vh";
+document.getElementById("gamerunc").style.width = "100vw";
+document.getElementById("tt").style.overflow = "hidden";
+}            
+    
+    </script>
 </body>
 </html>
