@@ -2,8 +2,13 @@
 
 <html>
 <head>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="https://i.ibb.co/gzgKGpm/20230824-151647.png">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#8505ff">
+<meta name="msapplication-navbutton-color" content="#8505ff">
+<meta name="apple-mobile-web-app-status-bar-style" content="#8505ff">
   <title>Form</title>
 </head>
 <body>
@@ -18,6 +23,16 @@
   <input placeholder="Father" name="father">
   <input placeholder="Mother" name="mother">
   <input placeholder="Knowledge" name="knowledge">
+    <div>
+      <h4><br>Privacy & Policy</h4>
+      <p>If the company is benefited then only you will get the money.
+        <br>
+        If the company does not benefit, then you will also not get the money.
+        <br><br>
+        <b>I Agree :</b>
+      </p>
+      <input type="checkbox" style="width: 20px;height: 20px;opacity: 100%;color: #8505ff;margin-top: -5px;" name="Agree">
+    </div>
   <button>SUBMIT</button><!--
 <input type="submit" value="Send">
 <input type="reset" value="Reset">-->
@@ -27,25 +42,53 @@
 </body>
 <style>
 *{
-  font-family: areil
+  font-family: verdana;
 }
-html{
+/*html{
   background-image: url(https://i.pinimg.com/736x/23/93/1c/23931cec40eee9526c3d89206070e7af.jpg);
   background-image: url(https://t3.ftcdn.net/jpg/05/85/86/44/360_F_585864419_kgIYUcDQ0yiLOCo1aRjeu7kRxndcoitz.webp);
+  background-image: url(https://i.ibb.co/CzP8W7k/20230821-150239.png);
   background-repeat: no-repeat;
   background-size: cover;
+}*/
+html{
+  background-color: #8505ff;
 }
 h1{
   color: #fff;
   text-align: center;
 }
+h4{
+  color: #000;
+  text-align: center;
+}
+p{
+  color: #000;
+  text-align: center;
+  font-size: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
 input{
   width: 100%;
   height: 60px;
-  border: 1px solid #eee;
+  border: 0px solid #eee;
   border-radius: 20px;
-  background-color: #000;
-  opacity: 80%;
+  background-color: #fff;
+  opacity: 100%;
+  margin-top: 10px;
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+}
+div{
+  width: 100%;
+  height: 130px;
+  border: 0px solid #eee;
+  border-radius: 20px;
+  background-color: #fff;
+  opacity: 100%;
   margin-top: 10px;
   text-align: center;
   color: #fff;
@@ -57,11 +100,11 @@ button{
   height: 60px;
   border: 1px solid #eee;
   border-radius: 20px;
-  background-color: #8505ff;
+  background-color: #fff;
   opacity: 100%;
   margin-top: 10px;
   text-align: center;
-  color: #fff;
+  color: #8505ff;
   font-weight: bold;
   font-size: 16px;
 }
@@ -89,7 +132,7 @@ button{
   height: 120px;
   border: 1px solid #eee;
   border-radius: 40px;
-  background-color: #8505ff;
+  background-color: #aaa;
   opacity: 100%;
   margin-top: 30px;
   text-align: center;
@@ -100,4 +143,20 @@ button{
 }
 }
 </style>
+<script>
+function sendEmail() {
+      Email.send({
+        Host: "smtp.gmail.com",
+        Username: "sender@email_address.com",
+        Password: "Enter your password",
+        To: 'receiver@email_address.com',
+        From: "sender@email_address.com",
+        Subject: "Sending Email using javascript",
+        Body: "Well that was easy!!",
+      })
+        .then(function (message) {
+          alert("mail sent successfully")
+        });
+    }
+</script>
 </html>
