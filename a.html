@@ -2,28 +2,69 @@
 <html>
 <head>
   <title>AV Help</title>
+  <link rel="icon" type="image/x-icon" href="https://i.ibb.co/gzgKGpm/20230824-151647.png">
     <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel="stylesheet">
       <link href='https://fonts.googleapis.com/css?family=Bungee Outline' rel='stylesheet'/>
     <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'/>
-    <!-- Use font awesome icons. -->    <meta name="viewport" content="width=device-width,initial-scale=1">
-  
+    <!-- Use font awesome icons. -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <!-- Use firebase app and database. -->
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#8505ff">
+<meta name="msapplication-navbutton-color" content="#8505ff">
+<meta name="apple-mobile-web-app-status-bar-style" content="#8505ff">
 </head>
+<script>
+function bottom() {
+window.scrollTo(0,document.body.scrollHeight);
+}
+function p() {
+document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0;
+}
+</script>
 <style>
 *{
   margin: 0px;
+  font-family: Varela Round;
 }
 nav{
   background-color: #8505ff;
   color: #f8f9ff;
   padding: 10px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+nav h1{
+  margin-top: 10px;
+  font-family: Varela Round;
+}
+nav button{
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #f8f9ff;
+  color: #8505ff;
+}
+nav .vvvvv{
+  width: 100px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #8505ff;
+  color: #8505ff;
 }
 </style>
 <body>
-  <nav><h1>AV HELP</h1></nav>
+  <nav><h1>AV HELP</h1><button class="vvvvv">keyboard_double_arrow_down</button><button class="material-icons md-25" onclick="bottom()">keyboard_double_arrow_down</button><button class="material-icons md-25" onclick="p()">keyboard_double_arrow_up</button></nav>
 </body>
 
 <script>
@@ -491,6 +532,7 @@ body{
   height: 100%;
 }
 #chat_content_container{
+  margin-top: 40px;
   width: 100%;
   height: 90%;
 
