@@ -155,6 +155,7 @@ window.onload = function() {
             // parent = this. But it is not the join_button
             // It is (MEME_CHAT = this).
             parent.create_chat()
+            location.reload();
           }
         }else{
           // If the join_input is empty then turn off the
@@ -548,7 +549,7 @@ body{
   height: 10%;
 
   float: left;
-  border-bottom: 2px dashed #1D3354;
+  border-bottom: 0px dashed #1D3354;
   background-color: Transparent;
 
   padding-left: 15px;
@@ -586,22 +587,26 @@ body{
 
 }
 #chat_logout_container{
-  width: 100%;
+  
+}
+#chat_logout{
+  width: 90%;
   display: inline-block;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   float: left;
   margin-top: 20px;
+  margin-left: 20px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #D64045;
+  color: #fff;
+  cursor: pointer;
+  background-color: #D64045;
 }
 #chat_logout{
-  color: #D64045;
-  cursor: pointer;
-}
-#chat_logout:hover{
-  text-decoration: underline;
+  text-decoration: none;
 }
 .message_container{
   width: 100%;
@@ -665,10 +670,10 @@ body{
   height: 40px;
   animation: spin 1s linear infinite;
 
-  border-top: 6px solid #D64045;
-  border-bottom: 6px solid #1D3354;
-  border-left: 6px solid #E9FFF9;
-  border-right: 6px solid #E9FFF9;
+  border-top: 6px solid #8505ff;
+  border-bottom: 6px solid #8505ff;
+  border-left: 6px solid #f8f9ff;
+  border-right: 6px solid #f8f9ff;
 }
 
 @keyframes spin {
@@ -684,7 +689,7 @@ body{
   100% {}
 }
 ::selection {
-  background-color: #D64045;
+  background-color: #8505ff;
   color: #fff;
 }
 /* width */
@@ -697,7 +702,7 @@ body{
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #D64045;
+  background: #8505ff;
   border-radius: 5px;
 }    
 </style>
