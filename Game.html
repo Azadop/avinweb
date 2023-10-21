@@ -5,9 +5,9 @@
   <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel="stylesheet">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
-<body id="tt">     
+<body id="tt"> 
 <div class="gamerun"style="margin-left: -8px;
-  margin-top: -8px;"><iframe class="Iframe" id="gamerunc"></iframe></div>
+  margin-top: -8px;"><button id="Exit"onclick="exit()"class="material-icons md-25">arrow_back</button><iframe class="Iframe" id="gamerunc"></iframe></div>
   <div class="Container" id="Container" style="margin-top: -20px;">
 <!-- T-Rex-->
   <div class="T-rex"onclick="trex()">
@@ -28,8 +28,10 @@
   <style>
 *{
   font-family: areil;
-  
 } 
+body{
+  background-color: #f5f6ff;
+}       
 .T-rex{
   margin-left: 0px;
   width: 100%;
@@ -64,7 +66,7 @@
   width: 100%
   margin-top: 10px;
   margin-left: 0px;
-  box-shadow: 60px 60px 90px #000 inset;
+  box-shadow: 100px 90px 100px #101010 inset;
 }
 .chat ul{
   margin-left: -30px;
@@ -81,7 +83,7 @@
   width: 50px;
   height: 50px;
   border-radius: 25px;
-  background-color: #fff;
+  background-color: #eee;
   border: 1px solid #fff;
 }
 .chat ul li .userinfo{
@@ -134,8 +136,20 @@
   width: 0vw;
   height: 0vh;
   margin-left: 0px;
-  margin-bottom: 20px;
+  border: none;,
+}
+.gamerun button{
+  visibility: hidden;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: #000;
+  color: #fff;
   border: none;
+  opacity: 50%;
 }
   </style>
     <script>
@@ -143,10 +157,11 @@ function trex() {
 document.body.scrollTop = 0;
 document.documentElement.scrollTop = 0;  
 document.getElementById("tt").style.overflow = "hidden";
-document.getElementById("gamerunc").src = "https://azadop.github.io/avinweb/T-Rex.html"; 
+document.getElementById("gamerunc").src = "https://azadop.github.io/o/T-Rex.html"; 
 document.getElementById("Container").style.visibility = "hidden";
-document.getElementById("gamerunc").style.height = "100vh";
+document.getElementById("gamerunc").style.height = "92.5vh";
 document.getElementById("gamerunc").style.width = "100vw";
+document.getElementById("Exit").style.visibility = "visible";
 }    
 function doodlecricket() {
 document.body.scrollTop = 0;
@@ -154,9 +169,10 @@ document.documentElement.scrollTop = 0;
 document.getElementById("tt").style.overflow = "hidden";
 document.getElementById("gamerunc").src = "https://doodlecricket.github.io/#/"; 
 document.getElementById("Container").style.visibility = "hidden";
-document.getElementById("gamerunc").style.height = "100vh";
+document.getElementById("gamerunc").style.height = "92.5vh";
 document.getElementById("gamerunc").style.width = "100vw";
 document.getElementById("tt").style.overflow = "hidden";
+document.getElementById("Exit").style.visibility = "visible";
 }
 function tombrun() {
 document.body.scrollTop = 0;
@@ -164,11 +180,36 @@ document.documentElement.scrollTop = 0;
 document.getElementById("tt").style.overflow = "hidden";
 document.getElementById("gamerunc").src = "https://play.forestrygames.com/tomb-runner/"; 
 document.getElementById("Container").style.visibility = "hidden";
-document.getElementById("gamerunc").style.height = "100vh";
+document.getElementById("gamerunc").style.height = "92.5vh";
 document.getElementById("gamerunc").style.width = "100vw";
 document.getElementById("tt").style.overflow = "hidden";
+document.getElementById("Exit").style.visibility = "visible";  
 }            
-    
+function exit() {
+document.getElementById("Exit").style.visibility = "hidden";  
+document.body.scrollTop = 0;
+document.documentElement.scrollTop = 0;
+document.getElementById("tt").style.overflow = "visible";
+document.getElementById("gamerunc").src = "/default.asp"; 
+document.getElementById("Container").style.visibility = "visible";
+document.getElementById("gamerunc").style.height = "0vh";
+document.getElementById("gamerunc").style.width = "0vw";
+document.getElementById("tt").style.overflow = "visible";  
+}
+window.onload = function() {
+  var box = document.getElementById('Exit');
+box.addEventListener('touchmove', function(e) {
+  var touchLocation = e.targetTouches[0];
+    box.style.left = touchLocation.pageX + 'px';
+    box.style.top = touchLocation.pageY + 'px';
+  })
+box.addEventListener('touchend', function(e) {
+    // current box position.
+    var x = parseInt(box.style.left);
+    var y = parseInt(box.style.top);
+  })
+  
+}
     </script>
 </body>
 </html>
